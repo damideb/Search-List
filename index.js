@@ -10,7 +10,7 @@ users= []
 function searchList(search){
     let found=false
     for(i=0; i<users.length; i++){
-        if(users[i].innerText.toLowerCase().includes(search)){
+        if(users[i].innerText.toLowerCase().includes(search) ){
             users[i].classList.remove('hide')
             found=true
             
@@ -23,8 +23,10 @@ function searchList(search){
        
       
     }
-    if(!found){
-  
+    if(found){
+        wordText.style.display='none'
+    }
+    else{
         wordText.style.display=' block'
     }
     
