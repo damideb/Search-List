@@ -1,18 +1,33 @@
 var input = document.querySelector('.search')
+var wordText = document.querySelector('.text')
+
 var nodeList = document.querySelectorAll('.list');
 const usersInfo = document.getElementById('result')
+
 
 users= []
 
 function searchList(search){
+    let found=false
     for(i=0; i<users.length; i++){
-        if(!users[i].innerText.toLowerCase().includes(search)){
-            users[i].classList.add('hide')
+        if(users[i].innerText.toLowerCase().includes(search)){
+            users[i].classList.remove('hide')
+            found=true
+            
         }
-       if(search===""){
-        users[i].classList.remove('hide')
-       }
+        else{
+            users[i].classList.add('hide')
+           
+        }
+
+       
+      
     }
+    if(!found){
+  
+        wordText.style.display=' block'
+    }
+    
 }
 
 input.addEventListener('input', (e)=> searchList(e.target.value) )

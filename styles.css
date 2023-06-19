@@ -100,3 +100,12 @@ img{
 ul h5{
   margin-left: 150px;
 }
+
+.text{
+    display: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    background-color: hsl(0, 28%, 77%);
+    padding: 20px; 
+}
